@@ -18,13 +18,15 @@ export default function Home() {
         {/* nav bar Sing In */}
         <div className=" pr-10">
           <span>
-            <Link href="/login">
+            <Link href="/auth/login">
+            {/* <Link href="/login"> */}
               <button className=" text-gray-500 text-xl hover:text-sky-300 ">LogIn </button>
             </Link>
           </span>
           <span> / </span>
           <span>
-            <Link href="/signup">
+            <Link href="/auth/signup">
+            {/* <Link href="/signup"> */}
               <button className=" text-gray-500 text-xl hover:text-sky-300 "> Sing Up</button>
             </Link>
           </span>

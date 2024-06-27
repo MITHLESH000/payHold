@@ -1,12 +1,39 @@
-// not in use 
-
 import mongoose from "mongoose";
-import { type } from "os";
-
 
 const sellerSchema = new mongoose.Schema({
-    username:{
-        type:String,
-        require:[true, "Please provide a user name"]
-    }
-})
+    username: {
+        type: String,
+        required: [true, "Please provide a username"],
+        unique: true
+    },
+    email: {
+        type: String,
+        required: [true, "Please provide an email"],
+        unique: true
+    },
+    password: {
+        type: String,
+        required: [true, "Please provide a password"]
+    },
+    isVerified: {
+        type: Boolean,
+        default: false
+    },
+    isSeller: {
+        type: Boolean,
+        default: true // if false then seller
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false
+    },
+   
+    forgotPasswordToken: String,
+    forgotPasswordTokenExpiry: Date,
+    verifyToken: String,
+    verifyTokenExpiry: Date
+});
+
+const Seller = mongoose.models.sellers || mongoose.model("sellers", sellerSchema);
+
+export default Seller;

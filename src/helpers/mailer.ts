@@ -85,8 +85,8 @@ export const sendEmail = async ({ email, emailType, userId }: SendEmailParams): 
                     <body>
                         <div class="content">
                             <h2>${emailType === "VERIFY" ? "Verify Your Email" : "Reset Your Password"}</h2>
-                            <p>Click <a href="${process.env.DOMAIN}/verifyemail?token=${hashedToken}" class="button">here</a> to ${emailType === "VERIFY" ? "verify your email" : "reset your password"} or copy and paste the link below in your browser:</p>
-                            <p>${process.env.DOMAIN}/api/users/verifyemail?token=${hashedToken}</p>
+                            <p>Click <a href="${process.env.DOMAIN}/auth/verifyemail?token=${hashedToken}" class="button">here</a> to ${emailType === "VERIFY" ? "verify your email" : "reset your password"} or copy and paste the link below in your browser:</p>
+                            <p>${process.env.DOMAIN}/auth/verifyemail?token=${hashedToken}</p>
                         </div>
                     </body>
                 </html>

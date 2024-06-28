@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       {/* nav bar section */}
-      <div className="flex items-center justify-between h-14 w-full">
+      <div className="flex items-center justify-between h-14 w-full bg-gray-800">
         {/* nav bar logo */}
         <div className="pl-10">
           <span>

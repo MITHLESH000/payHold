@@ -27,7 +27,10 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-   
+   bank:{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: BankAccount,
+   },
     forgotPasswordToken: String,
     forgotPasswordTokenExpiry: Date,
     verifyToken: String,

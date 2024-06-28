@@ -23,10 +23,7 @@ const sellerSchema = new mongoose.Schema({
         type: Boolean,
         default: true // if false then seller
     },
-    isAdmin: {
-        type: Boolean,
-        default: false
-    },
+    
    
     forgotPasswordToken: String,
     forgotPasswordTokenExpiry: Date,
